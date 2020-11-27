@@ -10,3 +10,4 @@
 6. js file is located https://github.com/struthy/twig/blob/master/src/js/modules/twig.js
 7. to test - open src/js/modules/twig.js and modify values for (data) and (n) and save - console will update
 8. Quicker way to see code and test without installing - https://codepen.io/struthy/pen/PoGoVVg
+9. https://lodash.com/docs/4.17.15#chunk
