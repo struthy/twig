@@ -1,0 +1,18 @@
+h1 {
+}
+
+h2 {
+  @include title-md;
+}
+
+.pre-title {
+  @include title-xs;
+}
+
+.lead {
+  @include intro;
+  text-align: center;
+  @include breakpoint(tablet) {
+    text-align: left;
+  }
+}

@@ -1,0 +1,38 @@
+/* ==========================================================================
+   DEVELOPMENT GRID
+   ========================================================================== */
+
+#devGrid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 999999;
+  pointer-events: none;
+
+
+  .inner {
+    max-width: $global-container-width;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .inner>* {
+    background: rgba(255, 0, 0, .3);
+    height: 100%;
+    width: 4.8611111%;
+    margin-left: 2.7777778%;
+    float: left;
+
+    &:first-child {
+      margin-left: 5.5555556%;
+
+      @include breakpoint(mobile) {
+        margin-left: 6.25%;
+        width: 87.5%;
+      }
+
+    }
+  }
+}

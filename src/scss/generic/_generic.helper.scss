@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.flex {
+  display: flex;
+}
+
+// .grid {
+//   display: -ms-grid;
+//   display: grid;
+// }
+
+.visuallyhidden {
+  order: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  background: transparent;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.justify-center {
+  justify-content: center;
+}

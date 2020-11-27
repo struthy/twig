@@ -1,0 +1,32 @@
+///*----------------------------------*\
+//  #COLORS
+//\*----------------------------------*/
+
+// Set up a colour palette which allows us to theme the entire project from one
+// location.
+
+$color-a: #edeef2 !default;
+$color-b: #000000 !default;
+$color-c: #0008eb !default;
+$color-d: #555555 !default;
+$color-e: #f4f5f7 !default;
+$color-f: #e0e1e3 !default;
+$color-g: #dee6ef !default;
+$color-h: #ffffff !default;
+$color-i: #707070 !default;
+$color-j: #d70d17 !default;
+
+$color-grey-lightest: $color-a;
+$color-grey-light: $color-d;
+$color-grey-med: $color-d;
+$color-grey-dark: $color-g;
+$color-black: $color-b;
+$color-white: $color-h;
+
+// abstractions to make sense for css guys
+$color-highlight: $color-c;
+$color-ui: $color-i;
+$color-page-text: $color-grey-med;
+$color-page-background: $color-white;
+$color-page-head: $color-a;
+$color-page-head-background: $color-a;

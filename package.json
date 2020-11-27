@@ -1,0 +1,62 @@
+{
+  "name": "umbraco.archetype",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"webpack --env=dev -w\" \"browser-sync start --config bs-config.js \"",
+    "dev-mac": "concurrently \"webpack --env=dev -w\" \"browser-sync start --config bs-mac-config.js \"",
+    "prod": "webpack --env=prod --display=verbose",
+    "start": "webpack-dev-server --open --env=dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-proposal-object-rest-spread": "7.8.3",
+    "@babel/plugin-syntax-export-default-from": "7.8.3",
+    "@babel/plugin-transform-classes": "7.8.3",
+    "@babel/plugin-transform-object-assign": "7.8.3",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/register": "^7.10.5",
+    "autoprefixer": "^9.8.6",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.12",
+    "concurrently": "^5.3.0",
+    "file-loader": "^5.1.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-livereload-plugin": "2.2.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.10.4",
+    "@babel/runtime": "^7.11.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "core-js": "^3.6.5",
+    "es6-promise": "^4.2.8",
+    "es6-promise-promise": "^1.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "intersection-observer": "^0.7.0",
+    "intersection-observer-polyfill": "^0.1.0",
+    "lodash": "^4.17.20",
+    "regenerator-runtime": "^0.13.7"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "ie 11"
+    ],
+    "development": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "ie 11"
+    ]
+  }
+}

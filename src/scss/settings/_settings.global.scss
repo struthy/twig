@@ -1,0 +1,19 @@
+///*----------------------------------*\
+//  #GLOBAL
+//\*----------------------------------*/
+
+// Project-level settings and setup.
+
+// Base typographical styles and baseline grid.
+$global-html-font-size: 10px !default;
+$global-font-size: 1.8rem !default;
+$global-line-height: 1.44 !default;
+$global-font-family: Arial, Helvetica, sans-serif;
+$global-font-weight: normal;
+
+// Standardise some UI treatments.
+$global-container-width: 1170px;
+$global-column-width: 97.5px;
+$global-button-radius: 0 !default;
+$global-radius: 0 !default;
+$global-transition: 0.333333333s !default;

@@ -1,0 +1,17 @@
+/*------------------------------------*\
+  #LINKS
+\*------------------------------------*/
+
+/**
+ * Default styles for simple hyperlinks.
+ */
+
+.link {
+  @include link();
+  .icon {
+    height: 11px;
+    width: 11px;
+    fill: $color-highlight;
+    transform: rotate(-90deg);
+  }
+}

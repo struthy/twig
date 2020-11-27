@@ -1,0 +1,159 @@
+///*----------------------------------*\
+//  #TYPOGRAPHY
+//\*----------------------------------*/
+
+// Mixins to help generating typographical rules.
+
+@mixin init-list($padding: 0, $margin: 0, $list-style: none) {
+  margin: $margin;
+  padding: $padding;
+  list-style: $list-style;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+@mixin light {
+  color: $color-ui;
+}
+
+@mixin dark {
+  color: $color-a;
+}
+
+@mixin title-xl {
+  font-family: $global-font-family;
+  font-weight: 300;
+  font-size: 4.8rem;
+  line-height: 1.229;
+  letter-spacing: -1px;
+
+  @include breakpoint(mobile) {
+    font-size: 3.2rem;
+  }
+}
+
+@mixin title-lg {
+  font-family: $global-font-family;
+  font-weight: 300;
+  font-size: 3.6rem;
+  line-height: 1.638;
+  letter-spacing: -1px;
+}
+
+@mixin title-md {
+  font-family: $global-font-family;
+  color: $color-black;
+  font-size: 2.2rem;
+  line-height: 1.36;
+  margin-top: 0;
+  @include breakpoint(tablet) {
+    font-size: 3.6rem;
+    line-height: 1.33;
+  }
+}
+
+@mixin title-sm {
+  font-family: $global-font-family;
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 1.636;
+  letter-spacing: -1px;
+}
+
+@mixin title-xs {
+  font-family: $global-font-family;
+  font-size: 1.2rem;
+  letter-spacing: 0.2px;
+  line-height: 1.33;
+  color: $color-i;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+@mixin intro {
+  font-family: $global-font-family;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-top: 0;
+  padding-top: 0;
+  @include breakpoint(tablet) {
+    font-size: 2.4rem;
+    line-height: 1.5;
+  }
+}
+
+@mixin body {
+  font-family: $global-font-family;
+  color: $color-page-text;
+  font-weight: $global-font-weight;
+  font-size: $global-font-size;
+  line-height: $global-line-height;
+  letter-spacing: -0.5px;
+}
+
+@mixin body-sm {
+  font-family: $global-font-family;
+  color: $color-page-text;
+  font-weight: $global-font-weight;
+  font-size: 1.4rem;
+  line-height: $global-line-height;
+}
+
+@mixin callout {
+  font-family: $global-font-family;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.1666;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+@mixin button {
+  font-family: $global-font-family;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@mixin button-sm {
+  font-family: $global-font-family;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@mixin link {
+  font-family: $global-font-family;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2;
+  letter-spacing: 1px;
+  color: $color-highlight;
+  text-decoration: none;
+}
+
+// Simple truncation mixin to cut off text using an ellipsis after a certain
+// width.
+//
+// .simple-usage {
+//   @include truncate();
+// }
+//
+// .detailed-usage {
+//   @include truncate(<value>);
+// }
+@mixin truncate($width: 100%) {
+  max-width: $width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

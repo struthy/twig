@@ -1,0 +1,122 @@
+///*------------------------------------*\
+//    #MIXINS
+//\*------------------------------------*/
+
+/* Responsive Detection */
+@mixin breakpoint($media) {
+  @if $media==tablet {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  } @else if $media==small-desktop {
+    @media only screen and (min-width: 1050px) {
+      @content;
+    }
+  } @else if $media==desktop {
+    @media only screen and (min-width: 1250px) {
+      @content;
+    }
+  } @else if $media==large-desktop {
+    @media only screen and (min-width: 1700px) {
+      @content;
+    }
+  }
+}
+
+/* animation */
+@mixin animation($anim, $speed, $loop) {
+  -webkit-animation: $anim $speed $loop;
+  -moz-animation: $anim $speed $loop;
+  -o-animation: $anim $speed $loop;
+  animation: $anim $speed $loop;
+}
+
+// keyframes mixin
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+/* Opacity mixin */
+@mixin opacity($trans) {
+  opacity: $trans;
+  filter: alpha(opacity=($trans * 100));
+}
+
+/* Smooth transition */
+@mixin smooth {
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin smooth-in {
+  -moz-transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+@mixin smooth-delay {
+  -moz-transition: all 0.3s ease-in-out 0.1s;
+  -webkit-transition: all 0.3s ease-in-out 0.1s;
+  -o-transition: all 0.3s ease-in-out 0.1s;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+/* Smooth transition */
+@mixin smooth-long {
+  -moz-transition: all 0.9s;
+  -webkit-transition: all 0.9s;
+  -o-transition: all 0.9s;
+  transition: all 0.9s;
+}
+
+/* Smooth transition */
+@mixin no-transition {
+  -moz-transition: none !important;
+  -webkit-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+@mixin smoothbg {
+  -moz-transition: background 1s ease-in-out, box-shadow 0.3s ease-in-out;
+  -webkit-transition: background 1s ease-in-out, box-shadow 0.3s ease-in-out;
+  -o-transition: background 1s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: background 1s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Rotate Mixin */
+@mixin rotate-element($deg) {
+  $prefixes: "-moz-transform" "-webkit-transform" "-o-transform" "-ms-transform"
+    "transform";
+
+  @each $prefix in $prefixes {
+    #{$prefix}: rotate(#{$deg}deg);
+  }
+
+  @if $deg>=270 {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  } @else if $deg>=180 {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  } @else if $deg>=90 {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  } @else {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=4);
+  }
+}
