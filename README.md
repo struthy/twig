@@ -8,3 +8,4 @@
 4. open src/index.html or http://localhost:3002/index.html
 5. open developer console
 6. to test - open src/js/modules/twig.js and modify values for (data) and (n) and save - console will update
+7. Quicker way to see code and test without installing - https://codepen.io/struthy/pen/PoGoVVg
